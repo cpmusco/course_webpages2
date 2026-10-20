@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styles -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <base target="_blank">
+
+    <title>CS-GY 6923 Spring 2024</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">CS-GY 6923 2024</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://edstem.org/us/courses/65467/discussion/">Ed Discussion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brightspace.nyu.edu/d2l/home/398108">Brightspace</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.gradescope.com/courses/856995">Gradescope</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="syllabus.pdf">Syllabus</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Previous
+                        Years
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="https://www.chrismusco.com/machinelearning2023_grad/">2023</a>
+                        <a class="dropdown-item" href="https://www.chrismusco.com/machinelearning2022/">2022</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">NYU CS-GY 6923 Machine Learning</h1>
+
+                <p class="lead text-muted">
+                    An introduction to the exciting field of machine learning through a mixture of hands-on experience and theoretical foundations.
+                </p>
+            </div>
+            <div class="container courseteam">
+                <h5 class="instructors">
+                    <br/>
+                    <p><b>Course Team:</b></p>
+
+                    <div class="row">
+                        <div class="col-sm mb-3">
+                            <a href="https://www.chrismusco.com/"><img src="christophermusco.jpg" alt="Christopher Musco" width="130"></a>
+                            <div class="role">Professor</div>
+                            Christopher Musco
+                        </div>
+                        <div class="col-sm mb-3">
+                            <a href="mailto: pb2276@nyu.edu"><img src="prajjwal.jpeg" alt="Prajjwal Bhattarai"  width="130"></a>
+                            <div class="role">Course Assistant</div>
+                            Prajjwal Bhattarai
+                        </div>
+                        <div class="col-sm mb-3">
+                            <a href="mailto: mmc9967@nyu.edu"><img src="marc.jpeg" alt="Marc Chiu"  width="130"></a>
+                            <div class="role">Course Assistant</div>
+                            Marc Chiu
+                        </div>
+                    <!-- </div>
+                    <div class="row"> -->
+                        <div class="col-sm mb-3">
+                            <a href="mailto: usaid.malik@nyu.edu"><img src="usaid.jpeg" alt="Usaid Malik"  width="130"></a>
+                            <div class="role">Course Assistant</div>
+                            Usaid Malik
+                        </div>
+                        <div class="col-sm mb-3">
+                            <a href="mailto: nk3696@nyu.edu"><img src="navya.jpeg" alt="Navya Kriti"  width="130"></a>
+                            <div class="role">Grader</div>
+                            Navya Kriti
+                        </div>
+                        <div class="col-sm mb-3">
+                            <a href="mailto: at6115@nyu.edu"><img src="adith.jpg" alt="Adith Santosh" width="130"></a>
+                            <div class="role">Grader</div>
+                            Adith Santosh
+                        </div>
+                    </div>
+                </h5>
+            </div>
+        </section>
+
+        <div class="album py-3 bg-light">
+            <div class="container">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="courseinfo">
+                            <b>Lectures:</b> Friday 2:00pm-4:30pm, 2 Metrotech, Room 911. 
+                            <br> Zoom Recordings available through Brightspace.<br>
+
+
+                            <b>Professor office hours:</b> Wednesdays 10am-11:30am, on <a href="https://nyu.zoom.us/my/cmusco">Zoom</a>. <br> 
+                            <b>TA office hours:</b><br> 
+                            Marc: Tuesdays 1pm-3pm, <a href="https://nyu.zoom.us/j/3740419645">on Zoom</a>. <br> 
+                            Prajjwal: Fridays 11am-1pm, in person, 8th floor common area 370 Jay St. <br> 
+                            Usaid: Wednesday 1pm-3PM, <a href="https://meet.google.com/uwu-ozro-aqa ">on Google Meets</a>. <br> 
+
+                        </p>
+                        <p class="courseinfo">
+                            <b>Grading breakdown:</b> Written Problem Sets 20%, Programming Labs 20%, Midterm 25%, Final Exam 25%, Participation 10%</b>
+                        </p>
+
+                        <p class="courseinfo">
+                            <b>Ed Discussion:</b> All course communication will be via Ed, so please join <a href="https://edstem.org/us/courses/65467/discussion/">our site</a> from Brightspace. Please use Ed instead of email for any questions. We prefer that lectures or homework questions are asked publicly, since they will often help your classmates. Ed also supports private questions for things relevant only to you.
+                        </p>
+
+                        <p class="courseinfo">
+                            <b>Python and Jupyter:</b> Demos and labs in this class use Python, run through Jupyter notebooks. Jupyter lets you create and edit documents with live Python code and rich comments and images. We suggest that students run their Jupyter notebooks via Google Colaboratory, and we will share them via Colab. 
+                        </p>
+
+
+                        <p class="courseinfo">
+                            <b>Prerequisites:</b> 
+                            Modern machine learning uses a lot of math! Probably more than any other subject outside of theoretical computer science. You can get pretty far with an understanding of just calculus, probability, and linear algebra, but <i>that understanding needs to be solid</i> for you to succeed in this course. Formally we require a prior course in probability or statistics. If you need to freshen up on linear algebra, this <a href="http://web.stanford.edu/class/cs246/handouts/CS246_LinAlg_review.pdf">quick reference</a> from Stanford is helpful.
+
+                        </p>
+                    </div>
+
+                    <div class="col-sm">
+
+                        <p class="courseinfo">
+                            <b>Homework:</b> Homework (both written problems and coding labs) must be turned in to Gradescope by the specified deadline. You can access <a href="https://www.gradescope.com/courses/856995">our site</a> via Brighspace.  You are allowed 3 "slip days", i.e., one day extensions for any 3 assignments over the course of the semester. <br><br>
+                            
+                            Labs should be turned in as <i>evaluated</i> Jupyter notebooks. Do not clear the output before turning in.
+                            While not required, for written problem sets I encourage students to prepare problem sets in <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">LaTeX</a> or <a href="https://en.wikipedia.org/wiki/Markdown"> Markdown</a> (with <a href="http://support.typora.io/Math/">math support</a>.)
+                            You can use this <a href="template.tex">template</a> for LaTeX. While there is a learning curve, these tools typically save students time in the end! If you do write problems by hand, scan and upload as a PDF.<br><br>
+                      
+                            <u>Discussion is allowed on homework, but solutions and code must be written independently</u>. See the <a href="syllabus.pdf">syllabus</a> for details. We have a zero tolerance policy for copied code or solutions: any students with duplicate or very similar material will receive a zero on the offending assignment. My advice is to <b>never share code or solutions with other students.</b>
+                        </p>
+
+                        <p class="courseinfo">
+                            <b>Resources:</b> There is no textbook to purchase. I may post readings, some of which will come from the following book, which is available free online via the NYU library: 
+                            <ul>
+                                <li><a href="https://bobcat.library.nyu.edu/permalink/f/1c17uag/nyu_aleph008192436">An Introduction to Statistical Learning</a> by James, Witten, Hastie, and Tibshirani.</li>
+                            </ul>
+                            I have also found <a href="https://work.caltech.edu/lectures.html#lectures"> the lectures and notes</a> from the <a href="https://work.caltech.edu/telecourse.html">companion site</a> to the book <a href="http://work.caltech.edu/textbook.html">Learning With Data</a> (ISBN 978-1-60049-006-4) can be very helpful. This is a compact, inexpensive book if you want to purchase.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="album py-3 bg-light">
+            <div class="container">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Lecture #</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Reading</th>
+                            <th scope="col">Homework</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr class="tablesection">
+                            <td colspan="4">Function Fitting and Regression</td>
+                        </tr>
+
+                        <tr class="evenrow">
+                            <th scope="row">1. 9/6</th>
+                            <td>Introduction to Machine Learning, Loss Functions, Simple Linear Regression, Multiple Linear Regression</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec1.pdf">Lecture 1 slides</a> 
+                                        <a href="./lectures/lec1_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <br>
+
+
+                                    <li>
+                                        <b>Probability Review:</b> See this <a href="http://cs229.stanford.edu/section/cs229-prob.pdf">complete references</a> or the very good resources on <a href="https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library">Khan Academy</a>.
+                                    </li>
+                                    <li>
+                                        <b>Linear Algebra Review:</b> <a href="http://web.stanford.edu/class/cs246/handouts/CS246_LinAlg_review.pdf">This</a> should get you started.
+                                    </li>
+                                    <!-- <li>
+                                        <a href="./gradient_practice.pdf">Notes on computing gradients</a> <a href="./gradient_practice.md">(raw markdown)</a>.
+                                    </li>       -->
+                                    <li>
+                                        For additional reading, see Chapter 3.1 and 3.2 in <b>An Introduction to Statistical Learning.</b>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        If you have not used numpy or matplotlib before, or wish to brush-up, work through <a href="https://drive.google.com/file/d/1QEEYJNHMHWN1zRIcjgWPShYeXpkcI0ko/view?usp=sharing">Demo 1</a>. Not turned in.
+                                    </li>
+                                    <li>
+                                        Work through simple regression example in <a href="https://drive.google.com/file/d/10kzCVJuSTf6xuG_M2o6G4iyM5Y991oMc/view?usp=sharing">Demo 2</a>. Not turned in.
+                                    </li>
+                                    <!-- <li>
+                                        Complete <a href="https://colab.research.google.com/drive/1fUt69TcXA-YQSm2KP7gTmG4Ju_2-lI1S?usp=sharing">Lab 1</a>. Due <b>11:59pm, Monday 2/6</b>.
+                                   </li> -->
+                                   <li>Complete <a href="https://colab.research.google.com/drive/1s18Mn4285xmav76bMdL-978fp_omjSph?usp=sharing">Lab 1</a>, Due <b>11:59pm, Monday 9/16</b></li>
+                                </ul> 
+                            </td>
+                        </tr>
+                        
+                        <tr class="oddrow">
+                            <th scope="row">2. 9/13</th>
+                            <td>Finish Multiple Linear Regression, Data Transformations, Model Selection</td>
+                            <td>                                
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec2.pdf">Lecture 2 slides</a> 
+                                        <a href="./lectures/lec2_annotated.pdf">(annotated)</a>. 
+                                    </li>
+                                    <li>
+                                        <a href="./gradient_practice.pdf">Notes on computing gradients.</a> <a href="./gradient_practice.md">(raw markdown)</a>.
+                                    </li>   
+
+                                    <li>
+                                        Caltech  <a href="https://work.caltech.edu/lectures.html#lectures">Lecture 12</a> on regularization. It might be helpful to watch the video for Lecture 8 first to understand what he means by "bias-variance" tradeoff (which we did not cover formally).
+                                    </li> 
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Work through multiple regression example in <a href="https://drive.google.com/file/d/1yvq0DLyIIWlmsJ6xYKQFDfYDgo2dzVxf/view?usp=sharing">Demo 3</a>. Not turned in.
+                                    </li>
+                                    <li>
+                                        Work through <a href=https://drive.google.com/file/d/1WrE0wFpcns00wU2uQgR4IWKm0CATGwpv/view?usp=sharing">Demo 4</a> on polynomial regression and model order selection. Not turned in.
+                                    </li> 
+                                    <li>Complete <a href="https://colab.research.google.com/drive/1edDOH1gs1-5jBu-lrKGyRnJV0ZQd90_q?usp=sharing">Lab 2</a>, Due <b>11:59pm, Tuesday 9/24</b></li>
+                                   <li>
+                                    Complete written <a href="./homeworks/hw1.pdf">Homework 1</a>. Due <b>11:59pm, Tuesday 10/1</b>. 10% bonus if you typeset solutions in Markdown or Latex!
+                                    </li> 
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr class="tablesection">
+                            <td colspan="4">Bayesian Methods and Probabilistic Models</td>
+                        </tr>
+
+                        <tr class="evenrow">
+                            <th scope="row">3. 9/20</th>
+                            <td>Regularization, Naive Bayes, the Bayesian Perspective</td>
+                            <td>                                
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec3.pdf">Lecture 3 slides</a> 
+                                        <a href="./lectures/lec3_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <li>
+                                        <b>Additional reading on feature selection</b>: Chapter 6.1 in AISL.                              
+                                    <li>
+                                        <b>Additional reading on regularization</b>: Chapter 6.2 in AISL.
+                                    </li> 
+                                    <li>
+                                        <a href="./lectures/naive_bayes_extra.pdf">Additional lecture notes</a> on the Naive Bayes Algorithm.
+                                    </li>   
+                                    <li>
+                                        Section 3 of <a href="http://cs229.stanford.edu/notes2019fall/cs229-notes1.pdf">these notes</a> gives a nice overview of least squares regression from a statistical/probabilistic modeling perspective.
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <b>Math to review before lecture</b>: Discrete random variables, probability distribution, joint probability, conditional probability, Bayes rule.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+                        <tr class="oddrow">
+                            <th scope="row">4. 9/27</th>
+                            <td>More Bayesian Machine Learning, Modeling Language</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec4.pdf">Lecture 4 slides</a> 
+                                        <a href="./lectures/lec4_annotated.pdf">(annotated)</a>.
+                                    </li>   
+                                    <li>
+                                        <b>Additional reading on logistic regression</b>: Chapter 4.1-4.3 in AISL.                              
+                                    </li>
+                                    <li>
+                                        These <a href="http://cs229.stanford.edu/notes2019fall/cs229-notes1.pdf">notes</a> also give a good overview of logistic regression from a Bayesian perspective.
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <b>Math to review</b>: Continuous probability density functions, Gaussian random variables (know the expression for the Gaussian probability density function), Laplace random variables.
+                                    </li>
+                                    <li>
+                                        Complete <a href="https://drive.google.com/file/d/1pLjkXj1L07LwWOnLv88eDT-0HI_MOhlA/view?usp=sharing">Lab 3</a>. Due <b>11:59pm, Tuesday 10/8</b>. 
+                                     </li>  
+                                </ul>
+                            </td>
+                        </tr>    
+
+                        <tr class="tablesection">
+                            <td colspan="4">Classification</td>
+                        </tr>
+
+                        <tr class="evenrow">
+                                <th scope="row">5. 10/4</th>
+                                <td>K-nearest neighbors, Logistic Regression, Optimization</td>
+                                <td>     
+                                    <ul>                                     
+                                        <li>
+                                            <a href="./lectures/lec5.pdf">Lecture 5 slides</a> 
+                                            <a href="./lectures/lec5_annotated.pdf">(annotated)</a>. 
+                                        </li>   
+                                        <li>
+                                            Notes on <a href="./lectures/logistic_regression_gradient.pdf">computing the gradient for logistic regression</a> (optional to review).
+                                        </li> 
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <b>Math to review</b>: Softmax function, logistic loss.
+                                            </li>
+                                        <li>
+                                            Work through logistic regression demo: <a href="https://drive.google.com/file/d/1wNi3tsikGBL7pvjXPfqAqXi7GL-jkkXJ/view?usp=sharing"><code>demo_breast_cancer.ipynb</code></a>.
+                                        </li>
+                                        <li>
+                                            Complete written <a href="./homeworks/hw2.pdf">Homework 2</a>. Due <b>11:59pm, Tuesday 10/15</b>. No slip days allowed for this homework so that we can release solutions before the exam.
+                                        </li>  
+                                    </ul>
+                                </td>
+                        </tr>
+
+                        <tr class="oddrow">
+                            <th scope="row">6. 10/11</th>
+                            <td>Gradient Descent</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec6.pdf">Lecture 6 slides</a> 
+                                        <a href="./lectures/lec6_annotated.pdf">(annotated)</a>. 
+                                    </li>  
+                                </ul>
+                                <ul>
+                                    <li>                          
+                                        For information on the exam details, structure, and topics covered, consult <a href="./midterm_info.pdf">Midterm 1 information</a>.
+                                    </li>
+                                </ul>   
+                            </td>
+                            <td>
+                                <ul>
+                                    <!-- <li>                          
+                                        For information on the exam details, structure, and topics covered, consult <a href="./midterm_info.pdf">Midterm 1 information</a>.
+                                    </li> -->
+                                    <li>
+                                        <b>Math to review</b>: Directional derivative, convexity of functions, AM-GM inequality, Cauchy-Schwarz inequality.
+                                    </li>
+                                    <li>                          
+                                        Here are some <a href="./midterm_sample_questions.pdf">sample questions</a> which will be similar to those on the exam. Here are the <a href="./midterm_sample_solutions.pdf">solutions.</a>
+                                    </li> 
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr class="evenrow">
+                            <th scope="row">7. 10/18</th>
+                            <td>
+                                <b>Midterm Exam</b><br>
+                                Midterm will take first half of lecture. 
+                                Second half will be a short lecture on Differential Privacy in machine learning.
+                                
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec7.pdf">Lecture 7 slides</a> 
+                                        <a href="./lectures/lec7_annotated.pdf">(annotated)</a>. 
+                                    </li>  
+                                    <li> 
+                                        For additional reading on differential privacy, I highly recommend Prof. Gautam Kamath's <a href="http://www.gautamkamath.com/courses/CS860-fa2022.html">course material.</a>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <ul>
+                                    <li>Lab 3 Released, Due <b>11:59pm, Thursday 10/31</b></li>
+                                </ul> -->
+                            </td>
+                        </tr>
+
+                        <tr class="oddrow">
+                            <th scope="row">8. 10/25</th>
+                            <td>Stochastic gradient descent, introduction to learning theory and the PAC model</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec8.pdf">Lecture 8 slides</a> 
+                                        <a href="./lectures/lec8_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <li>                          
+                                        <a href="https://www.cs.cornell.edu/courses/cs6781/2020sp/lectures/03-pac1.pdf">Notes</a> from Nika Haghtalab on what we covered today.
+                                    </li>
+                                    <li>                          
+                                        If you are interested in learning more (e.g. about infinite hypthesis classes) see her <a href="https://www.cs.cornell.edu/courses/cs6781/2020sp/">notes for late lectures</a>.
+                                    </li>
+                                </ul>  
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Complete <a href="https://drive.google.com/file/d/1n74K4SvQevom3FEythnHB10v7O06hRLI/view?usp=sharing"><code>Lab 4</code></a>. Due <b>11:59pm, Tue. 11/5</b>.
+                                    </li>
+                                    <li>
+                                        The first half of this lab is a demo, which you should go through slowly. The parts you actually have to fill in don't start until the "L2 Regularization" section.
+                                    </li>
+                                    <!-- <li>Written Homework 3 Released, Due <b>11:59pm, Thursday 11/7</b></li> -->
+                                </ul>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr class="tablesection">
+                            <td colspan="4">Beyond Linear Methods</td>
+                        </tr>
+
+                        <tr class="evenrow">
+                            <th scope="row">9. 11/1</th>
+                            <td>Kernel Methods, Support Vector Machines</td>
+                            <td>                                
+                                <ul>
+                                   <li>
+                                        <a href="./lectures/lec9.pdf">Lecture 9 slides</a>  
+                                        <a href="./lectures/lec9_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <li>
+                                        For additional reading on SVMs, see Chapter 9 in <b>An Introduction to Statistical Learning.</b>
+                                    </li>         
+                                </ul> 
+                            </td>
+                            <td>
+                                <ul>
+                                    <!-- <li>
+                                        Complete written <a href="./homeworks/hw3.pdf">Homework 3</a>. Due <b>11:59pm, Thursday 4/14</b>.
+                                     </li>   -->
+                                    <li>
+                                        Work through <a href="https://drive.google.com/file/d/1UqWPYcEG2zaCg_vQ9utMBdHxB1pTqgh2/view?usp=sharing">SVM/kernel methods demo</a>.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr class="oddrow">
+                            <th scope="row">10. 11/8</th>
+                            <td>Finish SVMs, Introduction to Neural Nets</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec10.pdf">Lecture 10 slides</a> 
+                                        <a href="./lectures/lec10_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <li>
+                                         <a href="https://playground.tensorflow.org/">Tensorflow playground</a> link mentioned in class.
+                                    </li>   
+                                </ul> 
+                            </td>
+                            <td>   
+                                <ul>     
+
+                                <li>
+                                    Keras neural network demo on synthetic data:  <a href="https://drive.google.com/file/d/1nHZ0B1SMO3U3aKYG0NMZIIWUihdnrP96/view?usp=sharing"><code>keras_demo_synthetic.ipynb</code></a> 
+                                </li>
+                                <li>
+                                    Keras neural network demo on MNIST data:  <a href="https://drive.google.com/file/d/1Z1cOmLLLEUA2zaB_tKwTsSfFgjFNVASr/view?usp=sharing"><code>keras_demo_mnist.ipynb</code></a> 
+                                </li>
+                                <li>
+                                    Complete <a href="https://drive.google.com/file/d/1nCI8ZK-U3KqnfqXmUsbMt5KNffRAawV3/view?usp=sharing"><code>Lab 5</code></a>. Due <b>11:59pm, Tue. 11/19</b>.
+                                </li>
+                                <li>
+                                    Complete written <a href="./homeworks/hw3.pdf">Homework 3</a>. Due <b>11:59pm, Monday 12/2</b>.
+                                </li> 
+                                </ul>                    
+                            </td>
+                        </tr>
+
+                        <tr class="evenrow">
+                            <th scope="row">11. 11/15</th>
+                            <td>Backpropagation, Convolution, Feature Extraction</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec11.pdf">Lecture 11 slides</a> 
+                                        <a href="./lectures/lec11_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <li>
+                                        For additional reading on generalization in neural nets, see Chapter 10.8 in <b>An Introduction to Statistical Learning.</b>
+                                    </li>   
+                                </ul> 
+                            </td>
+                            <td>
+                                <ul>
+                                     <li>
+                                        Demo on convolution and creating convolutional layers in Keras:  <a href="https://drive.google.com/file/d/1dWutSr4QJUPjuqMxWo_YrVYFMN2-HaPn/view?usp=sharing"><code>demo_convolutions.ipynb</code></a>. 
+                                    </li>
+                                    <li>
+                                        Demo on training a convolutional network for the CIFAR-10 dataset:  <a href="https://drive.google.com/file/d/1kuOho7zFwYIeyFvBp8s2I0kR3ZSB8_DI/view?usp=sharing"><code>demo_cnn_classifier.ipynb</code></a>. 
+                                        To make sure Colab is using a GPU, click on the Runtime tab and then Change Runtime Environment. Select GPU under hardware acceleration. 
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr class="tablesection">
+                            <td colspan="4">Unsupervised Learning</td>
+                        </tr>
+
+                        <tr class="oddrow">
+                            <th scope="row">12. 11/22</th>
+                            <td>Finish Convolutional Nets, Adversarial Examples, Auto-encoders</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec12.pdf">Lecture 12 slides</a> 
+                                        <a href="./lectures/lec12_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                </ul> 
+                            </td>
+                            <td>
+                                <ul>
+                                    <!-- <li>
+                                        Complete written <a href="./homeworks/hw3.pdf">Homework 3</a>. Due <b>11:59pm, Monday 5/8</b>. 
+                                     </li> -->
+                                     <li>
+                                        Demo on adversarial examples!  <a href="https://drive.google.com/file/d/1W2_rYfq5pBIoWrgm7t0_Zvf3529c-1rp/view?usp=sharing"><code>Adversarial Image Classification.ipynb</code></a>. 
+                                    </li> 
+                                     <!-- <li>
+                                        Teal's demo on image generation using auto-encoders! <a href="https://colab.research.google.com/drive/1Ydc0cjEljpIpPh8T3s9Tc5-7bf1avzrL?usp=sharing"><code>Image Generation.ipynb</code></a>.  
+                                    </li> --> 
+                                    <li>Complete written <a href="./homeworks/hw4.pdf">Homework 4</a>, Due <b>11:59pm, Friday 12/13</b><br>
+                                    <a href="./homeworks/UScities.txt">UScities.txt</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr class="offday oddrow">
+                            <th scope="row">11/29</th>
+                            <td>Thanksgiving break, no class.</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="evenrow">
+                            <th scope="row">13. 12/6</th>
+                            <td>Principal Component Analysis, Semantic embeddings</td>
+                            <td>  
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec13.pdf">Lecture 13 slides</a> 
+                                        <a href="./lectures/lec13_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <!-- <ul>
+                                    <li>
+                                        Teal's demo on image generation using diffusion! <a href="https://colab.research.google.com/drive/1nO_o5G9r-HdygyM9NSzwx4qVN4UHR1gH?usp=sharing"><code>Diffusion Generation.ipynb</code></a>.  
+                                    </li>
+                                </ul> -->
+                            </td>
+                        </tr>
+
+
+                        <tr class="oddrow">
+                            <th scope="row">14. 12/11</th>
+                            <td>Finish semantic embeddings, image generation, introduction to Reinforcement Learning</td>
+                            <td>  
+                                <ul>
+                                    <li>
+                                        <a href="./lectures/lec14.pdf">Lecture 14 slides</a> 
+                                        <a href="./lectures/lec14_annotated.pdf">(annotated)</a>.
+                                    </li>
+                                    <br>
+
+                                    <li>
+                                        Demo on image generation using diffusion! <a href="https://drive.google.com/file/d/1K-q1gll_curXPOcddHIV5yRCS31bKFOk/view?usp=sharing"><code>Diffusion Generation.ipynb</code></a>.  
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=lvoHnicueoE">Stanford lecture on Q-learning</a>.
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=V1eYniJ0Rnk">Reinforcement learning demonstration</a>.
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>                          
+                                        <a href="./final_info.pdf">Final exam information</a> and <a href="./final_sample2024.pdf">practice problems.</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr> 
+
+                        <tr class="evenrow">
+                            <th scope="row">12/20</th>
+                            <td> 
+                                <b>Final Exam</b>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- <footer class="container">
+        <p>&copy 2017-2018</p>
+    </footer> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
